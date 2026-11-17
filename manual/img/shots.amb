@@ -1,0 +1,39 @@
+# The manual's pictures (docs/MANUAL.md): every page of SAMSARA, HOME's card, Hold, and Maranasati.
+#   app/build/host/samsara_host docs/img/shots.amb app/build/shots     then copy the PNGs to docs/img/
+wait 40000
+shot screen-tide.png
+tap ENV
+wait 300
+shot screen-pad.png
+tap ARP
+wait 300
+shot screen-bells.png
+tap LFO
+wait 300
+shot screen-bass.png
+tap SEQ
+wait 300
+shot screen-ground.png
+tap FX
+wait 300
+shot screen-space.png
+tap GLO
+wait 300
+shot screen-setup.png
+tap HOME
+wait 300
+press HOME
+wait 1500
+shot screen-help.png
+release HOME
+wait 300
+# Drift fully down: Hold
+spin K3 -25
+wait 2000
+shot screen-hold.png
+spin K3 25
+wait 300
+# the second piece (PRESETS is the simulator's E2: tests/scenarios/pieces.amb)
+turn PRESET 1
+wait 40000
+shot screen-maranasati.png

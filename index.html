@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAMSARA · An ambient piece for the FM-1</title>
+<meta name="description" content="An ambient piece for the FM-1 that never repeats and never stands still. A fork of AMB-1 for the M-VAVE FM-1; listen in the browser.">
+<meta name="theme-color" content="#0c1a4a">
+<style>
+/* the firmware's own colours (app/ui.c): the lapis blue and the gold of Tibetan painting */
+:root { --lapis: #0c1a4a; --panel: #162a68; --line: #324a8a; --dim: #a9b7dc; --gold: #f4da92; --acc: #eab43c;
+        --sky: #a8c8f2; color-scheme: dark; }
+body { background: var(--lapis); color: var(--gold); margin: 0; padding-inline: 16px; padding-block: 48px 64px;
+       font: 400 17px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; }
+h1 { font-size: 3rem; font-weight: 300; line-height: 1; letter-spacing: .12em; margin: 0 0 .3rem; color: var(--acc); }
+.sub { text-transform: uppercase; letter-spacing: .08em; font-size: .9rem; margin: 0 0 .5rem; }
+.for { font-style: italic; color: var(--dim); margin: 0 0 1.2rem; padding-bottom: .8rem; border-bottom: 1px solid var(--line); }
+h2 { font-size: 1.1rem; font-weight: 400; text-transform: uppercase; letter-spacing: .06em; margin: 2.4rem 0 .6rem;
+     padding-top: .6rem; border-top: 1px solid var(--line); color: var(--acc); }
+.lede { font-size: 1.15rem; margin: 0 0 1.6rem; max-width: 36rem; }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 1.8rem; }
+.shots img { width: 100%; height: auto; image-rendering: pixelated; border: 1px solid var(--line); }
+.ways { display: grid; gap: 10px; margin: 0 0 1rem; }
+.ways a { display: block; text-decoration: none; color: var(--gold); background: var(--panel); border: 1px solid var(--line); padding: 12px 16px; }
+.ways a:first-child { border-color: var(--acc); }
+.ways a:hover, .ways a:focus-visible { background: var(--line); }
+.ways a:focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+.ways strong { font-weight: 400; font-size: 1.15rem; text-transform: uppercase; letter-spacing: .05em; display: block; color: var(--acc); }
+.ways span { color: var(--dim); font-size: .95rem; }
+.ways em.v { font-style: normal; text-transform: none; letter-spacing: 0; }
+ul.garden { padding-left: 1.2rem; margin: 0 0 1rem; }
+ul.garden li { margin: 0 0 .4rem; }
+ul.garden li::marker { color: var(--acc); }
+p.small { color: var(--dim); font-size: .9rem; }
+a { color: var(--gold); text-decoration-color: var(--acc); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+code { font-size: .9em; }
+</style>
+</head>
+<body>
+<main>
+<h1>SAMSARA</h1>
+<p class="sub">An ambient piece for the M-VAVE FM-1</p>
+<p class="for">For Brett.</p>
+<p class="lede">SAMSARA turns the FM-1 into a slow ambient piece that plays itself and changes over hours, in the
+spirit of Brian Eno's <i>Reflection</i>. Tone, harmony and density drift; every so often the whole piece ebbs
+nearly to silence and returns. It never repeats and never stands still, unless you turn Drift fully down, which
+holds the moment you are in.</p>
+<div class="shots">
+  <img src="img/screen-tide.png" width="240" height="240" alt="SAMSARA's screen in lapis blue and gold: the wheel with the scale and the chord, the bell rings around it">
+  <img src="img/screen-maranasati.png" width="240" height="240" alt="SAMSARA's screen: the piece Maranasati">
+  <img src="img/screen-hold.png" width="240" height="240" alt="SAMSARA's screen: Drift fully down, the moment held">
+</div>
+<nav class="ways" aria-label="Get SAMSARA">
+  <a href="emu/"><strong>Listen in the browser</strong><span>No FM-1 needed: it runs the same code as the instrument. Press the page once to start the sound, then leave it playing, or turn the knobs with a mouse, a touch screen or the keyboard.</span></a>
+  <a href="install/"><strong>Install <em class="v">v1.0.0</em></strong><span>Connect your FM-1 by USB and install from Chrome or Edge. There's nothing to install on your computer.</span></a>
+  <a href="manual/"><strong>Manual</strong><span>Get started in a few minutes, then read about everything else.</span></a>
+  <a href="firmware/samsara-1.0.0.fwsc"><strong>Download <em class="v">samsara-1.0.0.fwsc</em></strong><span>For the command-line installer: <code>python3 base/tools/fm1_install.py samsara-1.0.0.fwsc</code></span></a>
+  <a href="https://github.com/tomorrowsman/fm1-samsara"><strong>Source</strong><span>On GitHub under MPL-2.0. A fork of AMB-1 by Charles Vestal, built on fm1-base and felucca-bsp, which grew out of Felucca by Hügelton Instruments.</span></a>
+</nav>
+
+<h2>The piece</h2>
+<ul class="garden">
+  <li>A breathing <b>pad</b>, soft <b>bells</b>, a gliding <b>bass</b> and a rare low <b>ground</b> come and go like weather, through a tape echo and a wandering plate.</li>
+  <li>Four knobs: <b>Mood</b> (dark to bright), <b>Density</b>, <b>Drift</b> (the pace of all change; fully down, it holds) and <b>Space</b> (near to far).</li>
+  <li>Four pieces: <b>Samsara</b>, <b>Maranasati</b>, <b>Anatta</b> and <b>Nirvana</b>. The keys are the scale: each key adds its note or takes it out.</li>
+</ul>
+<p>SAMSARA is a fork of <a href="https://github.com/charlesvestal/fm1-amb">AMB-1</a> by Charles Vestal, by
+Tomorrow's Man. The sounds, the pages and the whole platform are AMB-1's; SAMSARA's own part is the conductor over
+them: the weather, the tide, the wandering harmony and tone, and the wheel on the screen.</p>
+<p class="small">Installing a firmware on an FM-1 is at your own risk. To go back to the official firmware, use
+M-VAVE's own updater, M-UPGRADE, from <a href="https://www.m-vave.com/download">m-vave.com/download</a>.
+M-VAVE and FM-1 are trademarks of their owners. SAMSARA is not affiliated with M-VAVE or Brian Eno.</p>
+</main>
+</body>
+</html>
